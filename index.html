@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Weather App</title>
     <link rel="stylesheet" href="src/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
    <div class="container">
@@ -16,10 +17,10 @@
         
     </header>
     <main>
-        <h2><img src="icons/sun.png" width="80px"><br>Tuesday, 10:55</h2>
+        <h2><img src="icons/sun.png" width="80px"><br><span id="current-date">Tuesday, 10:55</span></h2>
     <h1 id="current-city">New york</h1>
     <div class="current-temp-info">
-    <span class="current-temp">50</span>
+    <span class="current-temp" id="current-temp">50</span>
      <span class="current-temp-unit">°C</span></div>
      
     <div class="climate-info">
