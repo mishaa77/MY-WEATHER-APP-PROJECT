@@ -14,14 +14,18 @@ background-color: #E8F9FF;}
 }
 .enter-city , .search-button{
     width:300px;
-    margin: 20px 40px ;
+    margin: 30px  ;
     padding: 10px 15px;
     border: none;
     border-radius: 3px;  
     font-size: 14px;
 }
 .search-button{
-    width:100px
+    width:145px;
+    transition:all 150ms ease-in-out
+}
+.search-button:hover{
+    background-color: #E4C3F6;
 }
  h2{
     text-align:center;
@@ -31,10 +35,17 @@ h1{
     text-align: center;
     font-size: 37px;
 }
-.current-temp{
+
+.current-temp-info{
     text-align: center;
-    font-size: 48px;
+    font-size: 80px;
     font-weight: 900;}
+    .current-temp-unit {
+        font-size: 28px;
+        position: relative;
+        top: -38px;
+        left:-20px
+      }
 
 .climate-info{
    display: flex;
@@ -49,13 +60,15 @@ h1{
     left: 20px;
     top: -27px;
     font-size: 22px;
+    font-weight: 600;
 }
 .hum{
     position: relative;
     top: -28px;
     right: -16px;
     font-size: 23px;
-    left:15px
+    left:15px;
+    font-weight: 600;
 }
 footer{
     position: relative;
