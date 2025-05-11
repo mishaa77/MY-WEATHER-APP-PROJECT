@@ -4,24 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Weather App</title>
+    <link rel="stylesheet" href="src/styles.css">
   </head>
   <body>
    <div class="container">
     <header class="input-form">
-        <form id="search-form" >
-            <input type="text" placeholder="Enter a  city..." id="enter-city">
+        <form class="search-form" >
+            <input type="text" placeholder="Enter a  city..."  required id="enter-city">
             <input type='submit' value="search" id="search-button">
         </form>
-        <p>Tuesday, 10:55 </p>
+        <p >Tuesday, 10:55 </p>
     </header>
     <main>
-        <h2>☀ Sunny</h2>
+        <h2>☀ </h2>
     <h1>New york</h1>
-    <p>50°C</p>
+    <p class="current-temp">50°C</p>
     <div class="climate-info">
+        <div class="'wind">
     <p>
-        wind <br> <img src="icons/wind.png" width="80px" > 25km/h <br>
-        humidity <br><img src="icons/humidity.png" width="80px">80%</p></div>
+        wind <br> <img src="icons/wind.png" width="80px" ><span class="wind-speed"> 25km/h</span> <br></p></div><div class="humidity"><p>
+        humidity <br><img src="icons/humidity.png" width="80px"><span class="hum">80%</span></p></div></div>
     
 </main>
 
