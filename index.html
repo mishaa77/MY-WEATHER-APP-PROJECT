@@ -9,15 +9,15 @@
   <body>
    <div class="container">
     <header class="input-form">
-        <form class="search-form" >
-            <input type="text" placeholder="Enter a  city..."  required class="enter-city">
+        <form class="search-form" id="search-form" >
+            <input type="text" placeholder="Enter a  city..."  required class="enter-city" id="enter-city">
             <input type='submit' value="search" class="search-button">
         </form>
         
     </header>
     <main>
         <h2><img src="icons/sun.png" width="80px"><br>Tuesday, 10:55</h2>
-    <h1>New york</h1>
+    <h1 id="current-city">New york</h1>
     <div class="current-temp-info">
     <span class="current-temp">50</span>
      <span class="current-temp-unit">°C</span></div>
@@ -49,5 +49,8 @@
       </p>
     </footer>
 </div>
+<script src="src/index.js">
+
+</script>
   </body>
 </html>
