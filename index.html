@@ -6,15 +6,23 @@
     <title>My Weather App</title>
   </head>
   <body>
-    <header>
+   <div class="container">
+    <header class="input-form">
         <form id="search-form" >
             <input type="text" placeholder="Enter a  city..." id="enter-city">
-            <input type='search' value="search" id="search-button">
+            <input type='submit' value="search" id="search-button">
         </form>
+        <p>Tuesday, 10:55 </p>
     </header>
     <main>
-        <h2>Sunny</h2>
+        <h2>☀ Sunny</h2>
     <h1>New york</h1>
+    <p>50°C</p>
+    <div class="climate-info">
+    <p>
+        wind <br> <img src="icons/wind.png" width="80px" > 25km/h <br>
+        humidity <br><img src="icons/humidity.png" width="80px">80%</p></div>
+    
 </main>
 
     <footer>
@@ -34,5 +42,6 @@
         >
       </p>
     </footer>
+</div>
   </body>
 </html>
