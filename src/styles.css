@@ -46,6 +46,13 @@ h1{
         top: -38px;
         left:-20px
       }
+      #description{
+        position: relative;
+        right: -350px;
+        top: -52px;
+        font-size: 24px;
+    
+      }
 
 .climate-info{
    display: flex;

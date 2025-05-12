@@ -2,6 +2,8 @@
 function displayTemp(response){
   let tempElement = document.getElementById('current-temp')
   tempElement.innerHTML = Math.round(response.data.temperature.current)
+  let city = document.getElementById("current-city");
+  city.innerHTML = response.data.city
 }
 
 function searchCity(city){
@@ -17,8 +19,8 @@ axios.get(apiUrl).then(displayTemp);
 function search(event){
   event.preventDefault();
   let enterCity = document.getElementById("enter-city");
-  let city = document.getElementById("current-city");
-  city.innerHTML = enterCity.value;
+  
+  
   searchCity(enterCity.value);
    
   ;
@@ -55,16 +57,11 @@ function formatDate() {
 let date = new Date();
 let currentDate = document.getElementById('current-date');
 currentDate.innerHTML = formatDate()
-  
-
-  
    
-   
-
-  
-       
 
     
  
 let formInput = document.getElementById('search-form');
 formInput.addEventListener('submit',search);
+
+searchCity('paris')
