@@ -1,14 +1,27 @@
+
+function displayTemp(response){
+  let tempElement = document.getElementById('current-temp')
+  tempElement.innerHTML = Math.round(response.data.temperature.current)
+}
+
+function searchCity(city){
+  
+  let apiKey = "900fe54a2dcb23943o88ct0a1d192e13";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
+axios.get(apiUrl).then(displayTemp);
+
+}
+
+
 function search(event){
   event.preventDefault();
   let enterCity = document.getElementById("enter-city");
   let city = document.getElementById("current-city");
   city.innerHTML = enterCity.value;
-  searchCity =enterCity.value;
+  searchCity(enterCity.value);
    
-  let apiKey = "b2a5adcct04b33178913oc335f40543";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchCity}&key=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(displayTemp);
+  ;
   
 }
     
