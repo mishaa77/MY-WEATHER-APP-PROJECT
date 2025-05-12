@@ -3,7 +3,20 @@ function displayTemp(response){
   let tempElement = document.getElementById('current-temp')
   tempElement.innerHTML = Math.round(response.data.temperature.current)
   let city = document.getElementById("current-city");
-  city.innerHTML = response.data.city
+ let humidity = document.getElementById('hum');
+ let weatherDescription =document.getElementById('description');
+ let wind = document.getElementById('wind');
+ let currentDate = document.getElementById("current-date");
+ let date = new Date(response.data.time *1000);
+
+ city.innerHTML = response.data.city;
+ weatherDescription.innerHTML = 
+   response.data.condition.description
+ ;
+ humidity.innerHTML= `${response.data.temperature.humidity}%`;
+ wind.innerHTML= `${response.data.wind.speed}km/h`;
+ currentDate.innerHTML = formatDate(date);
+
 }
 
 function searchCity(city){
@@ -20,14 +33,10 @@ function search(event){
   event.preventDefault();
   let enterCity = document.getElementById("enter-city");
   
-  
   searchCity(enterCity.value);
-   
-  ;
-  
 }
     
-function formatDate() {
+function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
   let day = date.getDay();
@@ -53,10 +62,11 @@ function formatDate() {
 
   let formattedDay = days[day];
   return `${formattedDay} ${hours}:${minutes}`;
+  
 }
-let date = new Date();
-let currentDate = document.getElementById('current-date');
-currentDate.innerHTML = formatDate()
+
+
+
    
 
     
