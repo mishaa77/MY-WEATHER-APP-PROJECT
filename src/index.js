@@ -8,15 +8,15 @@ function displayTemp(response){
  let wind = document.getElementById('wind');
  let currentDate = document.getElementById("current-date");
  let date = new Date(response.data.time *1000);
+ let iconElement = document.getElementById('icon')
+console.log(iconElement)
 
  city.innerHTML = response.data.city;
- weatherDescription.innerHTML = 
-   response.data.condition.description
- ;
+ weatherDescription.innerHTML = response.data.condition.description;
  humidity.innerHTML= `${response.data.temperature.humidity}%`;
  wind.innerHTML= `${response.data.wind.speed}km/h`;
  currentDate.innerHTML = formatDate(date);
-
+ iconElement.innerHTML = `<img  src="${response.data.condition.icon_url}" />`
 }
 
 function searchCity(city){
