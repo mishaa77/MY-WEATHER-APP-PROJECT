@@ -21,8 +21,9 @@ background-color: #E8F9FF;}
     font-size: 14px;
 }
 .search-button{
-    width:145px;
-    transition:all 150ms ease-in-out
+    width:150px;
+    transition:all 150ms ease-in-out;
+    margin-left:-20px ;
 }
 .search-button:hover{
     background-color: #E4C3F6;
@@ -71,14 +72,14 @@ h1{
     position: relative;
     left: 20px;
     top: -27px;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 600;
 }
 .hum{
     position: relative;
     top: -28px;
     right: -16px;
-    font-size: 23px;
+    font-size: 24px;
     left:15px;
     font-weight: 600;
 }
